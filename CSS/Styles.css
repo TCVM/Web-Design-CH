@@ -112,6 +112,10 @@ header h1{
     width: 25%;
     /* position:relative; */
     font-size:14px;
+    transition: width 2s,height 1s;
+}
+.menu ul li:hover{
+    width: 30%;height: 25%;
 }
 .menu ul li a{
     color: white;
@@ -163,8 +167,11 @@ img{
     height: auto;
     display: block;
     border: solid 2px black;
+    transition: max-width 2s;
 }
-
+img:hover{
+    max-width:60%;
+}
 ul{
     margin:initial;
     padding: initial;
