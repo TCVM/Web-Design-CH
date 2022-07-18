@@ -162,14 +162,14 @@ main{
 p{
     white-space: pre-wrap;
 }
-img{
+.proyectoimgs{
     max-width: 50%;
     height: auto;
     display: block;
     border: solid 2px black;
     transition: max-width 2s;
 }
-img:hover{
+.proyectoimgs:hover{
     max-width:60%;
 }
 ul{
