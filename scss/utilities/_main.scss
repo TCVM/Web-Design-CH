@@ -1,0 +1,62 @@
+/* ------Principal------ */
+main{
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px;
+    grid-area: main;
+    align-self: stretch;
+}
+.divmain{
+    display: flex;
+    justify-content: space-between;
+    p{
+        line-height: 1.4;
+    }
+}
+#bottom{
+    display: flex;
+    justify-content:space-between;
+}
+p{
+    white-space: pre-wrap;
+    animation-duration: 1s;
+    animation-name: aparecer;
+    animation-iteration-count:initial;
+}
+@keyframes aparecer {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.proyectoimgs{
+    max-width: 20%;
+    height: auto;
+    display: block;
+    border: $border-black;
+    transition: max-width 5s;
+    :hover{
+        max-width:30%;
+    }
+}
+
+.button{
+    background-color: rgb(37, 37, 37);
+    color: white;
+    text-decoration: none;
+    margin:5px;
+    padding:5px;
+    border-radius:10px;
+    width: 25%;
+    font-size:14px;
+    transition: font-size 2s,width 2s;
+    text-align: center;
+    :hover{
+        font-size: 150%;
+        width: 30%;
+    }
+}
+/* ------FinPrincipal------ */

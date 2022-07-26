@@ -1,291 +1,175 @@
-*{
-    margin:0;
-    padding:0;
-}
-body{
-    background-color: rgb(243, 235, 235);
-}
-
-/* ------Grid------ */
-
-#grid{
-    display: grid;
-    grid-template-areas: 
-    "header header header"
-    "main main main"
-    "footer footer footer";
-    grid-template-rows: 100px auto auto;
-    grid-template-columns: 20% auto 15%;
-}
-.border{
-    border: 1px solid black;
-}
-
-@media screen and (min-width:0px) and (max-width:480px){ 
-    #grid{
-            display: grid;
-            grid-template-areas: 
-            "header  header"
-            "main  main"
-            "footer footer"; 
-            grid-template-rows: auto auto auto;
-        grid-template-columns: auto auto;
-      }
-      .border{
-        border:2px solid black;
-      }
-      .divmain{
-        display: flex;
-        flex-direction: column;
-    }
-      .proyectoimgs{
-        max-width: 50%;
-        height: auto;
-        display: block;
-        border: solid 2px black;
-        transition: max-width 5s;
-    }
-    .proyectoimgs:hover{
-        max-width:30%;
-    }
-}
-
-@media screen and (min-width:480px) and (max-width:768px){ 
-    #grid{
-        display: grid;
-        grid-template-areas: 
-        "header  header"
-        "main  main"
-        "footer footer"; 
-        grid-template-rows: auto auto auto;
-        grid-template-columns: auto auto;
-      }
-      .border{
-        border:2px solid black;
-      }
-      .divmain{
-        display: flex;
-        flex-direction: column;
-    }
-      .proyectoimgs{
-        max-width: 50%;
-        height: auto;
-        display: block;
-        border: solid 2px black;
-        transition: max-width 5s;
-    }
-}
-
- @media screen and (min-width:768px) and (max-width:1024px){ 
-    #grid{
-        display: grid;
-        grid-template-areas: 
-        "header  header"
-        "main  main"
-        "footer footer"; 
-        grid-template-rows: auto auto auto;
-        grid-template-columns: auto auto;
-      }
-      .border{
-        border:2px solid black;
-      }
-      .divmain{
-        display: flex;
-        flex-direction: column;
-    }
-      .proyectoimgs{
-        max-width: 50%;
-        height: auto;
-        display: block;
-        border: solid 2px black;
-        transition: max-width 5s;
-    }
-    .proyectoimgs:hover{
-        max-width:50%;
-    }
-        
-}
-
-/* ------FinGrid------ */
-
 /* ------Encabedazado------ */
-
-header{
-    background:rgb(221, 116, 17) ;
-    padding: 5px;
-    text-align: left;
-    border-bottom:solid 5px black;
-    position: block;
-    grid-area: header;
-}
-header h1{
-     display: inline-block;
-    font-family: Copperplate, "Copperplate Gothic Light", fantasy; font-size: 40px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; 
-    color: rgb(10, 10, 10);
-    transition: font-size 2s;
-}
-header h1:hover{
-    font-size:300%;
-}
-
-/* ------lista------ */
-body{
-    height: 100%;
-    width: 100%;
-}
-.menu{
+header {
+  background: #dd7411;
+  padding: 5px;
+  text-align: left;
+  border-bottom: solid 2px black;
+  position: block;
+  grid-area: header; }
+  header h1 {
     display: inline-block;
-    width: 75%;
-    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px;
-
-}
-.menu ul{
-    list-style: none;
-    font-size: 0;
-    display: flex;
-    flex-direction:row;
-    justify-content:center;
-    flex-wrap: wrap;
-}
-.menu ul li{
-    display: flex;
-    justify-content: space-evenly;
-    background-color: black;
-    margin:5px;
-    padding:5px;
-    border-radius:10px;
-    /* display: inline-block; */
-    width: 25%;
-    /* position:relative; */
-    font-size:14px;
-    transition: width 2s,height 1s;
-}
-.menu ul li:hover{
-    width: 30%;height: 25%;
-}
-.menu ul li a{
-    color: white;
-    text-decoration: none;
-}
-
-/* ------Sublista------ */
-
-.menu ul ul{
-    position: absolute;
-    display: none;
-    z-index: 1;
-    width: 20%;
-}
-.menu ul ul li{
-    display:block;
-    width: 80%;
-}
-.menu ul li:hover ul{
-    background: gray;
-    display: block;
-}
-
-/* ------FinSublista------ */
-
-/* ------Finlista------ */
+    font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+    font-size: 40px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 26.4px;
+    color: #0a0a0a;
+    transition: font-size 2s; }
+    header h1 :hover {
+      font-size: 300%; }
 
 /* ------FinEncabedazado------ */
+/* ------Grid------ */
+#grid {
+  display: grid;
+  grid-template-areas: "header header header" "main main main" "footer footer footer";
+  grid-template-rows: 100px auto auto;
+  grid-template-columns: 20% auto 15%; }
 
-/* ------Principal------ */
+.border {
+  border: solid 2px black; }
 
-main{
-    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px;
-    grid-area: main;
-    align-self: stretch;
-}
-
-.divmain{
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  #grid {
+    display: grid;
+    grid-template-areas: "header  header" "main  main" "footer footer";
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto; }
+  .border {
+    border: solid 2px black; }
+  .divmain {
     display: flex;
-    justify-content: space-between;
-}
-
-.divmain p{
-    line-height: 1.4;
-}
-
-#bottom{
-    display: flex;
-    justify-content:space-between;
-}
-
-p{
-    white-space: pre-wrap;
-    animation-duration: 1s;
-    animation-name: aparecer;
-    animation-iteration-count:initial;
-}
-
-@keyframes aparecer {
-    0%{
-        opacity: 0;
-    }
-    50%{
-        opacity: 0.5;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-.proyectoimgs{
-    max-width: 20%;
+    flex-direction: column; }
+  .proyectoimgs {
+    max-width: 50%;
     height: auto;
     display: block;
     border: solid 2px black;
-    transition: max-width 5s;
-}
-.proyectoimgs:hover{
-    max-width:30%;
-}
-ul{
-    margin:initial;
-    padding: initial;
-    list-style: initial;
-    list-style-position: initial;
-}
+    transition: max-width 5s; }
+  .proyectoimgs:hover {
+    max-width: 30%; } }
 
-.button{
-    background-color: rgb(37, 37, 37);
-    color: white;
-    text-decoration: none;
-    margin:5px;
-    padding:5px;
-    border-radius:10px;
-    width: 25%;
-    font-size:14px;
-    transition: font-size 2s,width 2s;
-    text-align: center;
-}
-.button:hover{
-    font-size: 150%;
-    width: 30%;
-}
-/* ------Formulario------ */
-
-.formulario{
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  #grid {
+    display: grid;
+    grid-template-areas: "header  header" "main  main" "footer footer";
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto; }
+  .border {
+    border: solid 2px black; }
+  .divmain {
+    display: flex;
+    flex-direction: column; }
+  .proyectoimgs {
+    max-width: 50%;
+    height: auto;
     display: block;
-}
+    border: solid 2px black;
+    transition: max-width 5s; } }
 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #grid {
+    display: grid;
+    grid-template-areas: "header  header" "main  main" "footer footer";
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto; }
+  .border {
+    border: 2px solid 2px black; }
+  .divmain {
+    display: flex;
+    flex-direction: column; }
+  .proyectoimgs {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    border: solid 2px black;
+    transition: max-width 5s; }
+  .proyectoimgs:hover {
+    max-width: 50%; } }
 
-/* ------FinFormulario------ */
+/* ------FinGrid------ */
+/* ------Principal------ */
+main {
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 20px;
+  grid-area: main;
+  align-self: stretch; }
+
+.divmain {
+  display: flex;
+  justify-content: space-between; }
+  .divmain p {
+    line-height: 1.4; }
+
+#bottom {
+  display: flex;
+  justify-content: space-between; }
+
+p {
+  white-space: pre-wrap;
+  animation-duration: 1s;
+  animation-name: aparecer;
+  animation-iteration-count: initial; }
+
+@keyframes aparecer {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0.5; }
+  100% {
+    opacity: 1; } }
+
+.proyectoimgs {
+  max-width: 20%;
+  height: auto;
+  display: block;
+  border: solid 2px black;
+  transition: max-width 5s; }
+  .proyectoimgs :hover {
+    max-width: 30%; }
+
+.button {
+  background-color: #252525;
+  color: white;
+  text-decoration: none;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 10px;
+  width: 25%;
+  font-size: 14px;
+  transition: font-size 2s,width 2s;
+  text-align: center; }
+  .button :hover {
+    font-size: 150%;
+    width: 30%; }
 
 /* ------FinPrincipal------ */
-
 /* ------PiedePagina------ */
-
-footer{
-    background-color:rgb(221, 116, 17) ;
-    left: 0;
-    bottom: 0;
-    text-align: center;
-    border-bottom:solid 5px black;
-    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px;
-    grid-area: footer;
-
-}
+footer {
+  background-color: #dd7411;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  border-bottom: solid 2px black;
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 20px;
+  grid-area: footer; }
 
 /* ------FinPiedePagina------ */
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: #f3ebeb;
+  height: 100%;
+  width: 100%; }

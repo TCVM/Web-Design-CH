@@ -1,0 +1,22 @@
+/* ------Encabedazado------ */
+
+header{
+    background: $background-color ;
+    padding: 5px;
+    text-align: left;
+    border-bottom: $border-black;
+    position: block;
+    grid-area: header;
+    h1{
+        display: inline-block;
+       font-family: Copperplate, "Copperplate Gothic Light", fantasy; font-size: 40px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; 
+       color: rgb(10, 10, 10);
+       transition: font-size 2s;
+       :hover{
+        font-size:300%;
+        }
+    }
+
+}
+
+/* ------FinEncabedazado------ */
