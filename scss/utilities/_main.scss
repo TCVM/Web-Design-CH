@@ -7,15 +7,19 @@ main{
 .divmain{
     display: flex;
     justify-content: space-between;
+
     p{
         line-height: 1.4;
     }
 }
 #bottom{
-    display: flex;
-    justify-content:space-between;
+     @extend .divmain;
+    // display: flex;
+    // justify-content:space-between;
 }
+
 p{
+
     white-space: pre-wrap;
     animation-duration: 1s;
     animation-name: aparecer;
@@ -42,7 +46,6 @@ p{
         max-width:30%;
     }
 }
-
 .button{
     background-color: rgb(37, 37, 37);
     color: white;
@@ -59,4 +62,9 @@ p{
         width: 30%;
     }
 }
+a{
+    color: map-get($map:$colors, $key:colores );
+    text-decoration: map-get($map: $colors, $key:decoracion );
+}
+
 /* ------FinPrincipal------ */

@@ -1,6 +1,6 @@
 /* ------Encabedazado------ */
 header {
-  background: #dd7411;
+  background: #D1512D;
   padding: 5px;
   text-align: left;
   border-bottom: solid 2px black;
@@ -33,12 +33,12 @@ header {
 @media screen and (min-width: 0px) and (max-width: 480px) {
   #grid {
     display: grid;
-    grid-template-areas: "header  header" "main  main" "footer footer";
+    grid-template-areas: "header  header" "main  main" "footer footer";
     grid-template-rows: auto auto auto;
     grid-template-columns: auto auto; }
   .border {
     border: solid 2px black; }
-  .divmain {
+  .divmain, #bottom {
     display: flex;
     flex-direction: column; }
   .proyectoimgs {
@@ -53,12 +53,12 @@ header {
 @media screen and (min-width: 480px) and (max-width: 768px) {
   #grid {
     display: grid;
-    grid-template-areas: "header  header" "main  main" "footer footer";
+    grid-template-areas: "header  header" "main  main" "footer footer";
     grid-template-rows: auto auto auto;
     grid-template-columns: auto auto; }
   .border {
     border: solid 2px black; }
-  .divmain {
+  .divmain, #bottom {
     display: flex;
     flex-direction: column; }
   .proyectoimgs {
@@ -71,12 +71,12 @@ header {
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   #grid {
     display: grid;
-    grid-template-areas: "header  header" "main  main" "footer footer";
+    grid-template-areas: "header  header" "main  main" "footer footer";
     grid-template-rows: auto auto auto;
     grid-template-columns: auto auto; }
   .border {
-    border: 2px solid 2px black; }
-  .divmain {
+    border: solid 2px black; }
+  .divmain, #bottom {
     display: flex;
     flex-direction: column; }
   .proyectoimgs {
@@ -100,15 +100,11 @@ main {
   grid-area: main;
   align-self: stretch; }
 
-.divmain {
+.divmain, #bottom {
   display: flex;
   justify-content: space-between; }
-  .divmain p {
+  .divmain p, #bottom p {
     line-height: 1.4; }
-
-#bottom {
-  display: flex;
-  justify-content: space-between; }
 
 p {
   white-space: pre-wrap;
@@ -148,11 +144,16 @@ p {
     font-size: 150%;
     width: 30%; }
 
+a {
+  color: #e25402;
+  text-decoration: none; }
+
 /* ------FinPrincipal------ */
 /* ------PiedePagina------ */
 footer {
-  background-color: #dd7411;
+  background-color: #D1512D;
   left: 0;
+  right: 0;
   bottom: 0;
   text-align: center;
   border-bottom: solid 2px black;

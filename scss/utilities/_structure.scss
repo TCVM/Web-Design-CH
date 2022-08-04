@@ -13,30 +13,54 @@
     border: $border-black;
 }
 
+@mixin grid ($display,$grid-template-areas){
+  display:$display;
+  grid-template-areas:$grid-template-areas;
+}
+@mixin grids($grid-template-rows,$grid-template-columns) {
+  grid-template-rows: $grid-template-rows;
+  grid-template-columns:$grid-template-columns;
+}
+@mixin imgs ($max-width,$height,$display,$border,$transition){
+  max-width:$max-width;
+  height:$height;
+  display:$display;
+  border:$border;
+  transition:$transition;
+}
+
 @media screen and (min-width:0px) and (max-width:480px){ 
     #grid{
-            display: grid;
-            grid-template-areas: 
-            "header  header"
+            @include grid(grid,"header  header"
             "main  main"
-            "footer footer"; 
-            grid-template-rows: auto auto auto;
-        grid-template-columns: auto auto;
+            "footer footer");
+            @include grids(auto auto auto, auto auto);
+
+            // display: grid;
+            // grid-template-areas: 
+            // "header  header"
+            // "main  main"
+            // "footer footer"; 
+        //     grid-template-rows: auto auto auto;
+        // grid-template-columns: auto auto;
       }
+
       .border{
-        border:$border-black;
-      }
+        border: $border-black;
+    }
+
       .divmain{
         display: flex;
         flex-direction: column;
     }
       .proyectoimgs{
-        max-width: 50%;
-        height: auto;
-        display: block;
-        border: $border-black;
-        transition: max-width 5s;
-    }
+        @include imgs(50%,auto,block,$border-black,max-width 5s)
+    //     max-width: 50%;
+    //     height: auto;
+    //     display: block;
+    //     border: $border-black;
+    //     transition: max-width 5s;
+     }
     .proyectoimgs:hover{
         max-width:30%;
     }
@@ -44,53 +68,43 @@
 
 @media screen and (min-width:480px) and (max-width:768px){ 
     #grid{
-        display: grid;
-        grid-template-areas: 
-        "header  header"
-        "main  main"
-        "footer footer"; 
-        grid-template-rows: auto auto auto;
-        grid-template-columns: auto auto;
+      @include grid(grid,"header  header"
+      "main  main"
+      "footer footer");
+      @include grids(auto auto auto, auto auto);
       }
+
       .border{
-        border:$border-black;
-      }
+        border: $border-black;
+    }
+
       .divmain{
         display: flex;
         flex-direction: column;
     }
       .proyectoimgs{
-        max-width: 50%;
-        height: auto;
-        display: block;
-        border: $border-black;
-        transition: max-width 5s;
+        @include imgs(50%,auto,block,$border-black,max-width 5s)
     }
 }
 
  @media screen and (min-width:768px) and (max-width:1024px){ 
     #grid{
-        display: grid;
-        grid-template-areas: 
-        "header  header"
-        "main  main"
-        "footer footer"; 
-        grid-template-rows: auto auto auto;
-        grid-template-columns: auto auto;
+      @include grid(grid,"header  header"
+      "main  main"
+      "footer footer");
+      @include grids(auto auto auto, auto auto);
       }
+      
       .border{
-        border:2px $border-black;
-      }
+        border: $border-black;
+    }
+
       .divmain{
         display: flex;
         flex-direction: column;
     }
       .proyectoimgs{
-        max-width: 50%;
-        height: auto;
-        display: block;
-        border: $border-black;
-        transition: max-width 5s;
+        @include imgs(50%,auto,block,$border-black,max-width 5s)
     }
     .proyectoimgs:hover{
         max-width:50%;
