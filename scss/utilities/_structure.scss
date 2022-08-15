@@ -21,7 +21,8 @@
   grid-template-rows: $grid-template-rows;
   grid-template-columns:$grid-template-columns;
 }
-@mixin imgs ($max-width,$height,$display,$border,$transition){
+@mixin imgs ($width,$max-width,$height,$display,$border,$transition){
+  $width:$width;
   max-width:$max-width;
   height:$height;
   display:$display;
@@ -54,7 +55,7 @@
         flex-direction: column;
     }
       .proyectoimgs{
-        @include imgs(50%,auto,block,$border-black,max-width 5s)
+        @include imgs(200%,50%,auto,block,$border-black,max-width 5s)
     //     max-width: 50%;
     //     height: auto;
     //     display: block;
@@ -83,7 +84,7 @@
         flex-direction: column;
     }
       .proyectoimgs{
-        @include imgs(50%,auto,block,$border-black,max-width 5s)
+        @include imgs(200%,50%,auto,block,$border-black,max-width 5s)
     }
 }
 
@@ -104,7 +105,7 @@
         flex-direction: column;
     }
       .proyectoimgs{
-        @include imgs(50%,auto,block,$border-black,max-width 5s)
+        @include imgs(200%,50%,auto,block,$border-black,max-width 5s)
     }
     .proyectoimgs:hover{
         max-width:50%;

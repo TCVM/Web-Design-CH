@@ -1,25 +1,116 @@
 /* ------Encabedazado------ */
 header {
-  background: #D1512D;
+  background: #42032c;
   padding: 5px;
   text-align: left;
   border-bottom: solid 2px black;
   position: block;
-  grid-area: header; }
+  grid-area: header;
+  display: flex;
+  justify-content: space-between; }
   header h1 {
-    display: inline-block;
+    align-self: center;
     font-family: Copperplate, "Copperplate Gothic Light", fantasy;
-    font-size: 40px;
+    font-size: 60px;
     font-style: normal;
     font-variant: normal;
     font-weight: 700;
     line-height: 26.4px;
-    color: #0a0a0a;
+    color: #e4dcdc;
     transition: font-size 2s; }
     header h1 :hover {
       font-size: 300%; }
+  header .navbarcolor {
+    background-color: rgba(255, 255, 255, 0); }
 
 /* ------FinEncabedazado------ */
+/* ------Principal------ */
+main {
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 20px;
+  grid-area: main;
+  align-self: stretch;
+  background-color: #f1efdc; }
+
+h1 {
+  animation-duration: 1s;
+  animation-name: caer; }
+
+h3 {
+  animation-duration: 1s;
+  animation-name: caer; }
+
+p {
+  padding: 2px;
+  white-space: pre-wrap;
+  animation-duration: 1s;
+  animation-name: aparecer;
+  animation-iteration-count: initial; }
+
+a {
+  color: #e25402;
+  text-decoration: none; }
+
+#imgcard {
+  width: 50%;
+  align-self: center; }
+
+.divmain, #bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  animation-duration: 1s;
+  animation-name: caer; }
+  .divmain p, #bottom p {
+    line-height: 1.4; }
+
+.backgrounddivs {
+  background-color: #e6d2aa; }
+
+.backgroundshs {
+  background-color: #d36b00; }
+
+.proyectoimgs {
+  max-width: 20%;
+  height: auto;
+  display: block;
+  border: solid 2px black;
+  transition: max-width 5s; }
+  .proyectoimgs :hover {
+    max-width: 30%; }
+
+.button {
+  background-color: #252525;
+  color: white;
+  text-decoration: none;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 10px;
+  width: 25%;
+  font-size: 14px;
+  transition: font-size 2s,width 2s;
+  text-align: center; }
+  .button :hover {
+    font-size: 150%;
+    width: 30%; }
+
+@keyframes caer {
+  0% {
+    transform: translate(500px); } }
+
+@keyframes aparecer {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0.5; }
+  100% {
+    opacity: 1; } }
+
+/* ------FinPrincipal------ */
 /* ------Grid------ */
 #grid {
   display: grid;
@@ -89,69 +180,12 @@ header {
     max-width: 50%; } }
 
 /* ------FinGrid------ */
-/* ------Principal------ */
-main {
-  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-  font-size: 14px;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 400;
-  line-height: 20px;
-  grid-area: main;
-  align-self: stretch; }
-
-.divmain, #bottom {
-  display: flex;
-  justify-content: space-between; }
-  .divmain p, #bottom p {
-    line-height: 1.4; }
-
-p {
-  white-space: pre-wrap;
-  animation-duration: 1s;
-  animation-name: aparecer;
-  animation-iteration-count: initial; }
-
-@keyframes aparecer {
-  0% {
-    opacity: 0; }
-  50% {
-    opacity: 0.5; }
-  100% {
-    opacity: 1; } }
-
-.proyectoimgs {
-  max-width: 20%;
-  height: auto;
-  display: block;
-  border: solid 2px black;
-  transition: max-width 5s; }
-  .proyectoimgs :hover {
-    max-width: 30%; }
-
-.button {
-  background-color: #252525;
-  color: white;
-  text-decoration: none;
-  margin: 5px;
-  padding: 5px;
-  border-radius: 10px;
-  width: 25%;
-  font-size: 14px;
-  transition: font-size 2s,width 2s;
-  text-align: center; }
-  .button :hover {
-    font-size: 150%;
-    width: 30%; }
-
-a {
-  color: #e25402;
-  text-decoration: none; }
-
-/* ------FinPrincipal------ */
 /* ------PiedePagina------ */
 footer {
-  background-color: #D1512D;
+  color: white;
+  display: flex;
+  justify-content: center;
+  background-color: #42032c;
   left: 0;
   right: 0;
   bottom: 0;
@@ -164,11 +198,16 @@ footer {
   font-weight: 400;
   line-height: 20px;
   grid-area: footer; }
+  footer img {
+    padding: 3px;
+    width: 2%;
+    height: 60%; }
 
 /* ------FinPiedePagina------ */
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-size: 16px; }
 
 body {
   background-color: #f3ebeb;

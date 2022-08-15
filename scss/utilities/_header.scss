@@ -7,14 +7,19 @@ header{
     border-bottom: $border-black;
     position: block;
     grid-area: header;
+    display: flex;
+    justify-content: space-between;
     h1{
-        display: inline-block;
-       font-family: Copperplate, "Copperplate Gothic Light", fantasy; font-size: 40px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; 
-       color: rgb(10, 10, 10);
+       align-self: center;
+       font-family: Copperplate, "Copperplate Gothic Light", fantasy; font-size: 60px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; 
+       color: rgb(228, 220, 220);
        transition: font-size 2s;
        :hover{
         font-size:300%;
         }
+    }
+    .navbarcolor{
+        background-color: rgba(255, 255, 255, 0);
     }
 }
 
