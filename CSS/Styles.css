@@ -22,6 +22,8 @@ header {
       font-size: 300%; }
   header .navbarcolor {
     background-color: rgba(255, 255, 255, 0); }
+  header .navbar {
+    width: 450px; }
 
 /* ------FinEncabedazado------ */
 /* ------Principal------ */
@@ -37,16 +39,16 @@ main {
   background-color: #f1efdc; }
 
 h1 {
-  animation-duration: 1s;
+  animation-duration: 0.5s;
   animation-name: caer; }
 
 h3 {
-  animation-duration: 1s;
+  animation-duration: 0.5s;
   animation-name: caer; }
 
 p {
-  padding: 2px;
-  white-space: pre-wrap;
+  padding: 4px;
+  justify-content: center;
   animation-duration: 1s;
   animation-name: aparecer;
   animation-iteration-count: initial; }
@@ -63,7 +65,7 @@ a {
   display: flex;
   justify-content: space-between;
   padding: 5px;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
   animation-name: caer; }
   .divmain p, #bottom p {
     line-height: 1.4; }
@@ -79,9 +81,13 @@ a {
   height: auto;
   display: block;
   border: solid 2px black;
-  transition: max-width 5s; }
+  transition: max-width 5s;
+  padding: 4px; }
   .proyectoimgs :hover {
     max-width: 30%; }
+
+form {
+  justify-content: center; }
 
 .button {
   background-color: #252525;
@@ -100,7 +106,7 @@ a {
 
 @keyframes caer {
   0% {
-    transform: translate(500px); } }
+    transform: translate(100px); } }
 
 @keyframes aparecer {
   0% {
@@ -139,7 +145,13 @@ a {
     border: solid 2px black;
     transition: max-width 5s; }
   .proyectoimgs:hover {
-    max-width: 30%; } }
+    max-width: 30%; }
+  img {
+    justify-content: center; }
+  #bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px; } }
 
 @media screen and (min-width: 480px) and (max-width: 768px) {
   #grid {
@@ -157,7 +169,13 @@ a {
     height: auto;
     display: block;
     border: solid 2px black;
-    transition: max-width 5s; } }
+    transition: max-width 5s; }
+  img {
+    justify-content: center; }
+  #bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px; } }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   #grid {
@@ -177,7 +195,13 @@ a {
     border: solid 2px black;
     transition: max-width 5s; }
   .proyectoimgs:hover {
-    max-width: 50%; } }
+    max-width: 50%; }
+  img {
+    justify-content: center; }
+  #bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px; } }
 
 /* ------FinGrid------ */
 /* ------PiedePagina------ */

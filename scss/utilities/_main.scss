@@ -7,22 +7,20 @@ main{
 }
 
 h1{
-    animation-duration: 1s;
+    animation-duration: 0.5s;
     animation-name: caer;
 }
 h3{
-    animation-duration: 1s;
+    animation-duration: 0.5s;
     animation-name: caer;
 }
 
 #bottom{
      @extend .divmain;
-    // display: flex;
-    // justify-content:space-between;
 }
 p{
-    padding:2px;
-    white-space: pre-wrap;
+    padding:4px;
+    justify-content: center;
     animation-duration: 1s;
     animation-name: aparecer;
     animation-iteration-count:initial;
@@ -39,7 +37,7 @@ a{
     display: flex;
     justify-content: space-between;
     padding: 5px;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
     animation-name: caer;
     p{
         line-height: 1.4;
@@ -58,9 +56,14 @@ a{
     display: block;
     border: $border-black;
     transition: max-width 5s;
+    padding: 4px;
     :hover{
         max-width:30%;
     }
+}
+
+form{
+    justify-content: center;
 }
 
 .button{
@@ -81,7 +84,7 @@ a{
 }
 @keyframes caer {
     0%{
-        transform: translate(500px);
+        transform: translate(100px);
     }
 
 }

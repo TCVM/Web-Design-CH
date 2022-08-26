@@ -65,6 +65,15 @@
     .proyectoimgs:hover{
         max-width:30%;
     }
+    img{
+      justify-content: center;
+  }
+  #bottom{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
 }
 
 @media screen and (min-width:480px) and (max-width:768px){ 
@@ -85,6 +94,14 @@
     }
       .proyectoimgs{
         @include imgs(200%,50%,auto,block,$border-black,max-width 5s)
+    }
+    img{
+        justify-content: center;
+    }
+    #bottom{
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
     }
 }
 
@@ -110,7 +127,14 @@
     .proyectoimgs:hover{
         max-width:50%;
     }
-        
+    img{
+      justify-content: center;
+  }
+  #bottom{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
 }
 
 /* ------FinGrid------ */
